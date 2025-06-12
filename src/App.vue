@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import {ref} from "vue";
+import MySalary from "@/presenter/MySalary";
 
-let username = ref("王天一")
-let salary = ref(15000)
-
-function addSalary() {
-  salary.value += 2000
-  console.log(`salary: ${salary.value}`)
-}
+const { username, salary, addSalary } = MySalary()
 </script>
 
 <template>
