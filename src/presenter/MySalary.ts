@@ -1,21 +1,22 @@
-import {onMounted, ref} from "vue";
+import {onMounted, reactive} from "vue";
 
 export default function () {
-  const username = ref("王天一")
-  const salary = ref(15000)
+  const salaryInfo = reactive({
+    username: "王天一",
+    salary: 15000
+  })
 
   function addSalary() {
-    salary.value += 3000
-    console.log(`salary: ${salary.value}`)
+    salaryInfo.salary += 3000
+    console.log(`salary: ${salaryInfo.salary}`)
   }
 
   onMounted(() => {
-    console.log("加载了外部脚本")
+    console.log("加载了外部脚本2")
   });
 
   return {
-    username,
-    salary,
+    salaryInfo,
     addSalary
   }
 }
