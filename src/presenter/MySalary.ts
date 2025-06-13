@@ -1,4 +1,9 @@
-import {onMounted, reactive, toRefs} from "vue";
+import {
+  onMounted,
+  reactive,
+  ref,
+  toRefs
+} from "vue";
 
 export default function () {
   const salaryInfo = reactive({
@@ -21,12 +26,24 @@ export default function () {
   }
 
   onMounted(() => {
-    console.log("加载了外部脚本3")
+    console.log("加载了外部脚本4")
   });
+
+  const test = ref()
+  function showRes(){
+    console.log(test) //RefImpl ref对象
+    console.log(test.value) //<input> dom元素
+    console.log(test.value.value) //输⼊框的值
+    console.log(test.value.getAttribute("abc")) //⾃定义属性的值
+
+    test.value.value = 100
+  }
 
   return {
     username,
     salary,
-    addSalary
+    addSalary,
+    showRes,
+    test
   }
 }
