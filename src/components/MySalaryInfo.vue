@@ -1,15 +1,10 @@
 <script setup lang="ts">
-import MySalary from "@/presenter/MySalary";
+import {SalaryInfoBean} from "@/bean/SalaryInfoBean";
 
-const {
-  username,
-  salary
-} = MySalary()
-
-defineExpose({
-  username,
-  salary
-})
+// defineProps([
+//     "salaryInfo"
+// ])
+defineProps<{salaryInfo: SalaryInfoBean}>()
 </script>
 
 <script lang="ts">
@@ -20,10 +15,9 @@ export default {
 </script>
 
 <template>
-  <div>姓名：<input v-model="username"/> {{ username }}</div>
-  <div>薪水：<input type="number" v-model="salary"/> {{ salary }}</div>
+  <div>姓名：<input v-model="salaryInfo.username"/> {{ salaryInfo.username }}</div>
+  <div>薪水：<input type="number" v-model="salaryInfo.salary"/> {{ salaryInfo.salary }}</div>
 </template>
 
 <style scoped>
-
 </style>
