@@ -1,21 +1,23 @@
 <script setup lang="ts">
-import MySalary from "@/presenter/MySalary";
+import MySalaryInfo from "@/components/MySalaryInfo.vue";
+import {ref} from "vue";
 
-const {
-  username,
-  salary,
-  addSalary,
-  showRes,
-  test
-} = MySalary()
+const mySalaryInfo = ref()
+
+function showRes() {
+  console.log(mySalaryInfo)
+  console.log(mySalaryInfo.value)
+  console.log(mySalaryInfo.value.username)
+  console.log(mySalaryInfo.value.salary)
+}
+
 </script>
 
 <template>
   <div>
-    <div>姓名：<input v-model="username"/> {{ username }}</div>
-    <div>薪水：<input type="number" v-model="salary"/> {{ salary }}</div>
-    <div>test：<input ref="test" abc="abc" type="number" @click="showRes" /></div>
-    <button @click="addSalary">增加薪水</button>
+    <MySalaryInfo ref="mySalaryInfo"/>
+<!--    <button @click="addSalary">增加薪水</button>-->
+    <button @click="showRes">查看薪水</button> {{ mySalaryInfo?.username }}
   </div>
 </template>
 
