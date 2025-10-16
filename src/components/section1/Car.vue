@@ -24,6 +24,7 @@ function changeGames(id: string) {
 
 <template>
   <div class="car">
+    <h1>reactive语法</h1>
     <h2>{{ car.brand }} {{ car.name }}</h2>
     <p>价格: ¥{{ car.price }}</p>
     <button @click="car.price += 1000">修改汽车价格</button>

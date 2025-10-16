@@ -2,11 +2,13 @@
 import Person from "@/components/section1/Person.vue";
 import Person2 from "@/components/section1/Person2.vue";
 import Car from "@/components/section1/Car.vue";
+import Person3 from "@/components/section1/Person3.vue";
 </script>
 
 <template>
   <div class="app">
     <h2>Hello World</h2>
+    <Person3 class="item item-style"/>
     <Car class="item"/>
     <Person2 class="item"/>
     <Person class="item"/>
@@ -16,6 +18,13 @@ import Car from "@/components/section1/Car.vue";
 <style scoped>
 .app {
   background-color: #ddd;
+  box-shadow: 0 0 10px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.item-style {
+  background-color: skyblue;
   box-shadow: 0 0 10px;
   border-radius: 10px;
   padding: 20px;
