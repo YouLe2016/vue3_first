@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import Person from "@/components/section1/Person.vue";
+import Person2 from "@/components/section1/Person2.vue";
 </script>
 
 <template>
   <div class="app">
     <h2>Hello World</h2>
-    <Person/>
+    <Person2 class="item"/>
+    <Person class="item"/>
   </div>
 </template>
 
@@ -15,5 +17,9 @@ import Person from "@/components/section1/Person.vue";
   box-shadow: 0 0 10px;
   border-radius: 10px;
   padding: 20px;
+}
+
+.item {
+  margin: 20px 0;
 }
 </style>
