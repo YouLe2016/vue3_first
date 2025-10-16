@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {computed, ref} from "vue";
+  import {computed, ref} from "vue";
 
-const firstName = ref('张')
+  const firstName = ref('张')
   const lastName = ref('三')
 
   // 只读计算属性
@@ -44,7 +44,7 @@ const firstName = ref('张')
 
 <template>
   <div>
-    <h1>computed计算属性</h1>
+    <h2>computed计算属性</h2>
     姓：<input type="text" v-model="firstName"> <br>
     名：<input type="text" v-model="lastName"> <br>
     全名：<span>{{fullName}}</span> <br>

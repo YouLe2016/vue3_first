@@ -28,7 +28,7 @@
 
 <template>
   <div class="person">
-    <h1>快速体验，简单例子。</h1>
+    <h2>快速体验，简单例子。</h2>
     说明vue3完全支持vue2的语法
     <h2>姓名：{{ name }}</h2>
     <h2>年龄：{{ age }}</h2>

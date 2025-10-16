@@ -24,7 +24,7 @@
 
 <template>
   <div class="person">
-    <h1>快速体验setup语法，简单例子。</h1>
+    <h2>快速体验setup语法，简单例子。</h2>
     <h2>姓名：{{ name }}</h2>
     <h2>年龄：{{ age }}</h2>
     <button @click="changeName">修改名字</button>
