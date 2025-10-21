@@ -2,7 +2,7 @@
 import {reactive, watch} from "vue";
 import {Person} from "@/bean/Person";
 
-var person = reactive(new Person('张三', 18))
+const person = reactive(new Person('张三', 18))
 
 function changeName() {
   person.name += '~'

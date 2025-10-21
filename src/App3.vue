@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Person from "@/components/section3/Person.vue";
 import {reactive} from "vue";
-import {type Persons} from '@/bean/Person.js'
+import {Persons} from '@/bean/Person'
 
 const personList: Persons = reactive([
   {id: '001', name: '张三', age: 18},
