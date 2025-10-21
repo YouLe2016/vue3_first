@@ -1,15 +1,6 @@
 <script setup lang="ts">
 import {ref, watch} from "vue";
-
-class Person {
-  name: string
-  age: number
-
-  constructor(name: string = '', age: number = 0) {
-    this.name = name
-    this.age = age
-  }
-}
+import {Person} from "@/bean/Person";
 
 const person = ref(new Person('张三', 18))
 
@@ -52,7 +43,4 @@ watch(person, (newValue, oldValue) => {
 </template>
 
 <style scoped>
-  img {
-    width: 350px;
-  }
 </style>

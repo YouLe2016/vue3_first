@@ -5,12 +5,14 @@ import Car from "@/components/section1/Car.vue";
 import Person3 from "@/components/section1/Person3.vue";
 import PersonSection2 from "@/components/section2/Person.vue";
 import Person2Section2 from "@/components/section2/Person2.vue";
+import Person3Section2 from "@/components/section2/Person3.vue";
 
 </script>
 
 <template>
   <div class="app">
     <h2>Hello World</h2>
+    <Person3Section2 class="item item-style"/>
     <Person2Section2 class="item item-style"/>
     <PersonSection2 class="item item-style"/>
     <Person3 class="item item-style"/>
